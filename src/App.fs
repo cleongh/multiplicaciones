@@ -37,8 +37,8 @@ let render (state: State) (dispatch: Msg -> unit) =
   Html.div [
     match state.anterior with
     | Nuevo -> Html.p "¡A multiplicar!"
-    | Bien -> Html.p "¡Has acertado! :)"
-    | Mal -> Html.p ("¡Has fallado! ") // + string state.multiplicador + " x " + string state.multiplicando + " es " + (string (state.multiplicando * state.multiplicador)))
+    | Bien -> Html.p "¡Has acertado! 😄"
+    | Mal -> Html.p ("¡Has fallado! 😓") // + string state.multiplicador + " x " + string state.multiplicando + " es " + (string (state.multiplicando * state.multiplicador)))
     Html.p ("¿Cuánto es " + string state.multiplicando + " por " + string state.multiplicador + "?")
     Html.p [
       Html.input [prop.onChange (fun (r:string) -> 
